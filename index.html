@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Assignment 1</title>
+	<link rel="stylesheet" type="text/css" href="_css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="_css/style.css">
+	
+	<script type="text/javascript" src="_js/jquery.js"></script>
+	
+
+</head>
+
+<body>
+	<header class="storeInfo">
+		
+	</header>
+	
+	<div class="contentWrap">
+		<div id="bg0" class="contentBackground">
+			<section id="box0" class=gridOne></section>
+		</div>
+
+		<div id="bg1" class="contentBackground">
+			<section id="box1" class=gridOne></section>
+		</div>	
+
+		<div id="bg2" class="contentBackground">
+			<section id="box2" class=gridOne></section>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	$(document).ready(function($) {
+	$.ajax({
+		url: 'a1.xml',
+		type: 'GET',
+		dataType: 'xml',
+		success: handleResponse,
+	});
+
+	function handleResponse(xml){
+
+		$(xml).find("storefrontPicture").each(function(){
+			$("#storeInfo").append("<img src='_img/'" + $(this).find("storefrontPicture").text() + "width='100%'</p>")
+		});
+
+		var n = 0
+
+		$(xml).find("music").each(function(){
+			$("#bg"+n).append("<p class='artPic'><img src='_img/" + $(this).find("artistPicture").text() + "' width='100'</p>");
+
+			$("#box"+n).html("<p class = 'songTitle'>" + $(this).find("title").text() + "</p>");
+			
+			$("#box"+n).append("<p class='artName'>" + $(this).find("artistName").text() + "</p>");
+		
+			n++;
+		});
+	}
+	
+});
+</script>
+</html>

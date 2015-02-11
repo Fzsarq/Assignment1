@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- Include your name in this opening and also the closing tag 
+		 Take out all text in opening and closing tag and include just your username -->
+<liupet>
+	<!-- Include the name of your music store in the quotes -->
+	<musicstore title="Note">
+	
+		<!-- Include a picture of the front of the store -->
+		<storefrontPicture>storefront.jpg</storefrontPicture>
+		
+		<!-- Include the town where the store is located -->
+		<town>Toronto</town>
+		
+		<!-- Include the street address in attribute and closest intersection in text area -->
+		<intersection mainStreet="Yonge St">Bloor St</intersection>
+
+		<!-- For each song include: 
+					A song ID (your choice)
+					Song title
+					Artist name
+					Picture of the artist
+		-->
+		<music songID="CH">
+			<title>We'll Be Coming Back</title>
+			<artistPicture>ch.jpg</artistPicture>
+			<artistName>Calvin Harris</artistName>
+		</music>
+		<music songID="ZP">
+			<title>Escape</title>
+			<artistPicture>zp.jpg</artistPicture>
+			<artistName>Zoe Phillips</artistName>
+		</music>
+		<music songID="LM">
+			<title>Cut to Black</title>
+			<artistPicture>lm.jpg</artistPicture>
+			<artistName>Lemaitre</artistName>
+		</music>
+	</musicstore>
+</liupet>
+
+
