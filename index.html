@@ -3,6 +3,7 @@
 	<title>Assignment 1</title>
 	<link rel="stylesheet" type="text/css" href="_css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="_css/style.css">
+
 	
 	<script type="text/javascript" src="_js/jquery.js"></script>
 	
@@ -10,7 +11,7 @@
 </head>
 
 <body>
-	<header class="storeInfo">
+	<header id="storeInfo">
 		
 	</header>
 	
@@ -41,19 +42,12 @@
 
 	function handleResponse(xml){
 
-		$(xml).find("storefrontPicture").each(function(){
-			$("#storeInfo").append("<img src='_img/'" + $(this).find("storefrontPicture").text() + "width='100%'</p>")
-		});
+		$("#storeInfo").html("<img src='_img/" + $(xml).find("storefrontPicture").text() + "'/>");
 
 		var n = 0
 
 		$(xml).find("music").each(function(){
-			$("#bg"+n).append("<p class='artPic'><img id='chjpg' src='_img/" + $(this).find("artistPicture").text() + "' width='100'</p>");
-
-			$("#box"+n).html("<p class = 'songTitle'>" + $(this).find("title").text() + "</p>");
-			
-			$("#box"+n).append("<p class='artName'>" + $(this).find("artistName").text() + "</p>");
-		
+			$("#bg"+n).html("<img class='bgContain' src='_img/" + $(this).find("artistPicture").text() + "'/>" + "<h2 class='textOver'><span class='artName'>" + $(this).find("artistName").text() + "</span><br /><span class='songName'>" + $(this).find("title").text() + "</span></h2>");
 			n++;
 		});
 	}

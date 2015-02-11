@@ -6,7 +6,7 @@
 	<musicstore title="Note">
 	
 		<!-- Include a picture of the front of the store -->
-		<storefrontPicture>storefront.jpg</storefrontPicture>
+		<storefrontPicture>sf.jpg</storefrontPicture>
 		
 		<!-- Include the town where the store is located -->
 		<town>Toronto</town>

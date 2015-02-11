@@ -1,3 +1,8 @@
+#storeInfo{
+	width: inherit;
+	height: 20%;
+}
+
 .gridOne{
 	width: inherit;
 	height: inherit;
@@ -5,13 +10,89 @@
 
 .contentBackground{
 	width: 33%;
-	height: inherit;
+	height: auto;
 	float: left;
+	position: relative;
 }
 
 .contentWrap{
-	height: 74%;
+	height: 79%;
 	width: 100%;
 	float: left;
 	display: inline-block;
+}
+
+.bgContain{
+	width: 100%;
+	height: auto;
+	background-size: contain;
+	position: relative;
+}
+
+.textOver { 
+   position: absolute; 
+   top: 150px; 
+   left: 0; 
+   width: 100%; 
+}
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%;
+}
+
+span{
+	color: white; 
+    font: bold 24px/45px Helvetica, Sans-Serif; 
+    letter-spacing: -1px;  
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px; 
+}
+
+@font-face {
+    font-family: 'source_sans_prosemibold';
+    src: url('fonts/sourcesanspro-semibold-webfont.eot');
+    src: url('fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+         url('fonts/sourcesanspro-semibold-webfont.woff') format('woff'),
+         url('fonts/sourcesanspro-semibold-webfont.ttf') format('truetype'),
+         url('fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'source_sans_prolight';
+    src: url('fonts/sourcesanspro-light-webfont.eot');
+    src: url('fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
+         url('fonts/sourcesanspro-light-webfont.woff') format('woff'),
+         url('fonts/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bebas_neuelight';
+    src: url('fonts/bebasneue_light-webfont.eot');
+    src: url('fonts/bebasneue_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue_light-webfont.woff') format('woff'),
+         url('fonts/bebasneue_light-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue_light-webfont.svg#bebas_neuelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+span.artname{
+	font-family: 'source_sans_prosemibold', Fallback, sans-serif;
+}
+
+span.songName{
+	font-family: 'bebas_neuelight', Fallback, sans-serif;
+	letter-spacing: 1px;
 }
