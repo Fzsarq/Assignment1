@@ -48,7 +48,7 @@
 		var n = 0
 
 		$(xml).find("music").each(function(){
-			$("#bg"+n).append("<p class='artPic'><img src='_img/" + $(this).find("artistPicture").text() + "' width='100'</p>");
+			$("#bg"+n).append("<p class='artPic'><img id='chjpg' src='_img/" + $(this).find("artistPicture").text() + "' width='100'</p>");
 
 			$("#box"+n).html("<p class = 'songTitle'>" + $(this).find("title").text() + "</p>");
 			
